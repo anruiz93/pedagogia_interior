@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mí · Pedagogía Interior</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- YOUR NEW CSS FILE -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ===== 1. PORTADA ===== -->
+  <section style="position:relative;">
+    <div class="reveal visible">
+      <svg class="logo" viewBox="0 0 100 100">
+        <path class="enso" d="M 72 28 A 34 34 0 1 0 78 55"/>
+        <g transform="translate(50 50)">
+          <circle class="flor" cx="0" cy="-7" r="4"/><circle class="flor" cx="6.6" cy="-2.2" r="4"/>
+          <circle class="flor" cx="4.1" cy="5.7" r="4"/><circle class="flor" cx="-4.1" cy="5.7" r="4"/>
+          <circle class="flor" cx="-6.6" cy="-2.2" r="4"/><circle class="flor-c" cx="0" cy="0" r="2.5"/>
+        </g>
+      </svg>
+      <h1>Pedagogía Interior</h1>
+      <p class="sub">Acompañamiento filosófico para el autoconocimiento</p>
+    </div>
+    <div class="scroll-hint">
+      <span>desciende</span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- ===== 2. FRASE ===== -->
+  <section>
+    <p class="frase reveal">
+      "He llegado, estoy en casa. En el aquí, en el ahora."
+      <span class="autor">Thich Nhat Hanh</span>
+    </p>
+  </section>
+
+  <!-- ===== respira ===== -->
+  <section class="respiro reveal">~ respira ~</section>
+
+  <!-- ===== 3. INTRO ===== -->
+  <section class="intro">
+    <div class="reveal">
+      <p>El autoconocimiento no se recibe: se cultiva.</p>
+      <p>Un espacio de diálogo filosófico donde aprendemos, juntos, el arte de habitar la propia vida con presencia y lucidez.</p>
+    </div>
+  </section>
+
+  <!-- ===== 4. NAVEGACIÓN FINAL ===== -->
+  <section>
+    <div class="reveal">
+      <h1 style="font-size:clamp(2rem,5vw,3rem);margin-bottom:2.5rem;">Comencemos a caminar</h1>
+      <nav class="links" style="margin-bottom:3rem;">
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="#">Escritos</a>
+      </nav>
+      <br>
+      <a href="#" class="cta">Agenda una conversación</a>
+    </div>
+  </section>
+
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+        }
+      });
+    },{threshold:0.35});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+
+</body>
+</html>

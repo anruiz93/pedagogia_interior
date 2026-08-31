@@ -1,0 +1,211 @@
+/* =========================================
+   PEDAGOGÍA INTERIOR - MAIN STYLESHEET
+   Theme: Plum Village Sensibility
+   ========================================= */
+
+/* --- 1. VARIABLES (Color Palette & Fonts) --- */
+:root {
+  /* Colors */
+  --pino: #3E5641;       /* Deep Pine Green - Primary */
+  --ciruelo: #9C6B7D;    /* Plum Blossom - Accent */
+  --arena: #F2EDE4;      /* Sand/Rice Paper - Background */
+  --tierra: #B08968;     /* Earth - Secondary Text/Details */
+  --tinta: #2B2B28;      /* Soft Ink - Main Text */
+  
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* --- 2. GLOBAL RESET & BODY --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--arena);
+  color: var(--tinta);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased; /* Makes fonts look smoother on Mac */
+}
+
+/* --- 3. NAVIGATION --- */
+nav.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3rem;
+}
+
+nav.top .brand {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--pino);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav.top .menu {
+  display: flex;
+  gap: 2rem;
+}
+
+nav.top a {
+  color: var(--tinta);
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+nav.top a:hover {
+  opacity: 1;
+  color: var(--pino);
+}
+
+/* --- 4. MAIN CONTENT AREA --- */
+main {
+  /* Allows the content to flow naturally without fixed height constraints */
+  min-height: 75vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.inner {
+  max-width: 620px;
+  width: 100%;
+  margin: auto; /* Centers the block vertically within main */
+}
+
+/* --- 5. TYPOGRAPHY & ELEMENTS --- */
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--tierra);
+  margin-bottom: 1.3rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.3rem, 5vw, 3.4rem); /* Responsive font size */
+  font-weight: 400;
+  color: var(--pino);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.inner p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+/* --- 6. PORTRAIT IMAGE --- */
+.retrato {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--tierra);
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--arena);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(62, 86, 65, 0.15);
+  flex-shrink: 0;
+}
+
+.retrato img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the circle without stretching */
+  display: block;
+}
+
+/* --- 7. CALL TO ACTION BUTTON --- */
+.cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: transparent;
+  color: var(--pino);
+  border: 1.5px solid var(--pino);
+  padding: 0.95rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  transition: all 0.4s ease;
+  font-family: var(--font-sans);
+}
+
+.cta:hover {
+  background: var(--pino);
+  color: var(--arena);
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* --- 8. FOOTER --- */
+footer {
+  background-color: var(--pino);
+  color: var(--arena);
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+footer .aviso {
+  opacity: 0.55;
+  font-size: 0.9em; /* Slightly smaller than main footer text */
+}
+
+/* --- 9. RESPONSIVE DESIGN (Mobile) --- */
+@media (max-width: 600px) {
+  nav.top {
+    padding: 1.2rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav.top .menu {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    padding: 3rem 1.5rem;
+  }
+
+  .retrato {
+    width: 130px;
+    height: 130px;
+  }
+
+  footer {
+    font-size: 0.66rem;
+    padding: 0.8rem 1rem;
+  }
+  
+  footer .aviso {
+    display: block;
+    margin-top: 0.4rem;
+    line-height: 1.4;
+  }
+}

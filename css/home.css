@@ -1,0 +1,189 @@
+/* =========================================
+   PEDAGOGÍA INTERIOR - HOMEPAGE STYLES
+   Theme: Scrolling Meditative Experience
+   ========================================= */
+
+:root {
+  --pino: #3E5641;
+  --ciruelo: #9C6B7D;
+  --arena: #F2EDE4;
+  --tierra: #B08968;
+  --tinta: #2B2B28;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--arena);
+  color: var(--tinta);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+  /* Scroll contemplativo */
+  scroll-snap-type: y proximity;
+}
+
+/* Sections take full screen */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  scroll-snap-align: center;
+  position: relative; /* Needed for absolute positioning of hints */
+}
+
+/* Fade-in Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 3rem;
+}
+.enso {
+  fill: none;
+  stroke: var(--pino);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.flor { fill: var(--ciruelo); }
+.flor-c { fill: var(--tierra); }
+
+/* Typography */
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  font-weight: 400;
+  color: var(--pino);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.sub {
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  font-weight: 300;
+  color: var(--tierra);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.frase {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  max-width: 600px;
+  color: var(--pino);
+  line-height: 1.5;
+}
+.frase .autor {
+  display: block;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--tierra);
+  margin-top: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+/* Scroll Hint (Breathing Dot) */
+.scroll-hint {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--tierra);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.scroll-hint .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ciruelo);
+  animation: breathe 4s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(10px); opacity: 1; }
+}
+
+/* Intro Text */
+.intro p {
+  font-weight: 300;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  max-width: 560px;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+/*呼吸 Separator */
+.respiro {
+  min-height: 40vh; /* Smaller section for breathing room */
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ciruelo);
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+}
+
+/* Final Navigation */
+.links {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.links a {
+  color: var(--pino);
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+  transition: border 0.3s;
+}
+.links a:hover {
+  border-color: var(--ciruelo);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  background: transparent;
+  color: var(--pino);
+  border: 1.5px solid var(--pino);
+  padding: 1rem 2.6rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  transition: all 0.4s;
+}
+.cta:hover {
+  background: var(--pino);
+  color: var(--arena);
+}
