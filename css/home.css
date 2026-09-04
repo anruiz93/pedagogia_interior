@@ -187,3 +187,30 @@ h1 {
   background: var(--pino);
   color: var(--arena);
 }
+
+/* ---- Footer (Estilo limpio y delgado) ---- */
+footer {
+  background-color: var(--pino); /* Usa tu variable de color principal */
+  color: var(--arena);           /* Texto color arena/crema */
+  text-align: center;
+  padding: 0.6rem 1rem;          /* Padding reducido para que sea delgado */
+  font-size: 0.72rem;            /* Tamaño de fuente pequeño y elegante */
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;                /* Evita que se encoja extrañamente */
+}
+
+footer .aviso {
+  opacity: 0.55;                 /* Un poco más transparente para discreción */
+  font-size: 0.9em;              /* Ligeramente más pequeño que el texto principal */
+  display: inline;               /* Mantiene el flujo en línea si es necesario */
+}
+
+/* Opcional: Si quieres que el aviso salte de línea en móviles muy pequeños */
+@media (max-width: 400px) {
+  footer .aviso {
+    display: block;
+    margin-top: 0.3rem;
+  }
+}
+
