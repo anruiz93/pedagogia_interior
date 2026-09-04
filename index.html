@@ -81,14 +81,27 @@
     },{threshold:0.35});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
-<footer>
-  <p>Pedagogía Interior · Bogotá, Colombia</p>
-  <p>
-    <a href="mailto:tu@email.com">Email</a> | 
-    <a href="https://linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
-  </p>
-  <div class="aviso">Este servicio no constituye psicoterapia.</div>
-</footer>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    Pedagogía Interior · Acompañamiento filosófico
+    <span class="aviso">— No constituye psicoterapia ni atención en salud mental.</span>
+  </footer>
+
+  <!-- Script de animación (si lo tienes al final) -->
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+        }
+      });
+    },{threshold:0.35});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
