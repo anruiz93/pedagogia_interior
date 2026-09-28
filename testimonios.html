@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonios · Pedagogía Interior</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- Tu CSS existente -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    /* Estilos específicos para la página de testimonios */
+    .testimonio-card {
+      background: #fff;
+      padding: 3rem 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(62, 86, 65, 0.08);
+      margin: 2rem auto;
+      max-width: 700px;
+      text-align: left;
+      position: relative;
+      border: 1px solid rgba(62, 86, 65, 0.05);
+    }
+    
+    /* Comillas decorativas de fondo */
+    .testimonio-card::before {
+      content: """;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 6rem;
+      color: var(--ciruelo);
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      opacity: 0.15;
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .texto-testimonio {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--tinta);
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Contenedor de la firma y foto */
+    .firma-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* Alineado a la derecha */
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(62, 86, 65, 0.1);
+      padding-top: 1.5rem;
+    }
+
+    .texto-firma {
+      text-align: right;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--pino);
+    }
+
+    .nombre-autor {
+      font-size: 1.3rem;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .rol-autor {
+      font-size: 0.85rem;
+      font-style: normal;
+      color: var(--tierra);
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.05em;
+      margin-top: 0.2rem;
+      display: block;
+    }
+
+    /* Estilo de la foto circular */
+    .foto-autor {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--arena);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      background-color: var(--tierra);
+    }
+
+    /* Ajuste para móviles */
+    @media (max-width: 600px) {
+      .testimonio-card {
+        padding: 2rem 1.5rem;
+      }
+      .texto-testimonio {
+        font-size: 1rem;
+      }
+      .firma-container {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 0.8rem;
+        text-align: right;
+      }
+      .foto-autor {
+        width: 50px;
+        height: 50px;
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVEGACIÓN ===== -->
+  <nav class="top">
+    <a href="index.html" class="brand">Pedagogía Interior</a>
+    <div class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="testimonios.html">Testimonios</a>
+      <!-- Enlace "Contacto" eliminado -->
+    </div>
+  </nav>
+
+  <!-- ===== CONTENIDO ===== -->
+  <main>
+    <div class="inner">
+      <p class="label">Testimonios</p>
+      <h1>Voces del Camino</h1>
+
+      <!-- TARJETA DE TESTIMONIO 1 -->
+      <div class="testimonio-card">
+        <p class="texto-testimonio">
+          Mis sesiones con Nicolás se han convertido en espacios profundamente valiosos en mi vida. Me han permitido explorar mis emociones, creencias y pensamientos, comprender mejor su origen y encontrar estrategias reales para vivir con mayor tranquilidad, conciencia y presencia. 
+          <br><br>
+          Estos espacios me han ayudado a mirar mi historia con más amor, compasión y honestidad, reconociendo tanto los desafíos como los avances en mi camino de crecimiento personal y amor propio. En ese recorrido, Nicolás se ha convertido en un observador honesto y un guía respetuoso que me ha acompañado a conocerme mejor, descubrir nuevas perspectivas y conectar con la madre, mujer y ser humano que quiero seguir construyendo cada día.
+        </p>
+        
+        <div class="firma-container">
+          <div class="texto-firma">
+            <span class="nombre-autor">Maria Fernanda</span>
+            </div>
+          
+          <!-- FOTO DEL AUTOR -->
+          <img src="img/maria_fernanda.jpg" alt="Foto de Ana María" class="foto-autor" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <!-- SECCIÓN FINAL CON BOTÓN DE WHATSAPP -->
+      <div style="margin-top: 4rem; text-align: center;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--ciruelo); font-size: 1.2rem; margin-bottom: 2rem;">~ respira ~</p>
+        
+        <!-- Botón conectado a WhatsApp -->
+        <!-- RECUERDA: Reemplaza 57300XXXXXXX con tu número real -->
+        <a href="https://wa.me/573204747861?text=Hola,%20vengo%20de%20la%20página%20de%20testimonios%20y%20me%20gustaría%20agendar%20una%20sesión." 
+           class="cta" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           Agenda una conversación
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    Pedagogía Interior · Acompañamiento filosófico
+    <span class="aviso">— No constituye psicoterapia ni atención en salud mental.</span>
+  </footer>
+
+</body>
+</html>
